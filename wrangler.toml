@@ -1,0 +1,23 @@
+# Cloudflare Wrangler Configuration
+# https://developers.cloudflare.com/pages/functions/wrangler-configuration/
+
+# The name of your project (used for local development with `wrangler pages dev`)
+name = "vite-react-shadcn-ts"
+
+# Compatibility date for Workers runtime
+compatibility_date = "2024-01-01"
+
+# Pages configuration (optional - for local development with Functions)
+pages_build_output_dir = "dist"
+
+# Environment variables (optional - can also be set in Cloudflare Dashboard)
+# [vars]
+# API_URL = "https://api.example.com"
+
+# Production environment variables
+# [env.production.vars]
+# API_URL = "https://api.example.com"
+
+# Preview environment variables
+# [env.preview.vars]
+# API_URL = "https://preview-api.example.com"
