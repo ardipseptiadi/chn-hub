@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "bunx vite",
     "dev:wrangler": "wrangler pages dev dist --compatibility-date=2024-01-01",
-    "build": "vite build",
+    "build": "bunx vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview",
+    "preview": "bunx vite preview",
     "test": "vitest run",
     "test:watch": "vitest"
   },
