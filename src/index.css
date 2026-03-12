@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 33% 98%;
+    --foreground: 20 20% 16%;
+
+    --card: 30 25% 96%;
+    --card-foreground: 20 20% 16%;
+
+    --popover: 30 33% 98%;
+    --popover-foreground: 20 20% 16%;
+
+    --primary: 24 80% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 25% 92%;
+    --secondary-foreground: 20 20% 20%;
+
+    --muted: 30 15% 93%;
+    --muted-foreground: 20 10% 48%;
+
+    --accent: 160 40% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 18% 88%;
+    --input: 30 18% 88%;
+    --ring: 24 80% 55%;
+
+    --radius: 0.75rem;
+
+    --warm-cream: 38 40% 95%;
+    --warm-peach: 20 60% 92%;
+    --warm-brown: 20 20% 30%;
+    --warm-gold: 40 70% 55%;
+
+    --sidebar-background: 30 25% 96%;
+    --sidebar-foreground: 20 20% 16%;
+    --sidebar-primary: 24 80% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 25% 92%;
+    --sidebar-accent-foreground: 20 20% 16%;
+    --sidebar-border: 30 18% 88%;
+    --sidebar-ring: 24 80% 55%;
+
+    /* Dynamic Theme Variables */
+    --heading-font: 'DM Serif Display', serif;
+    --body-font: 'DM Sans', sans-serif;
+    --base-font-size: 16px;
+    --heading-scale: 1;
+    --dynamic-primary: #6366f1;
+    --dynamic-secondary: #8b5cf6;
+    --dynamic-accent: #f59e0b;
+  }
+
+  .dark {
+    --background: 20 18% 10%;
+    --foreground: 30 25% 92%;
+
+    --card: 20 15% 14%;
+    --card-foreground: 30 25% 92%;
+
+    --popover: 20 18% 10%;
+    --popover-foreground: 30 25% 92%;
+
+    --primary: 24 80% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 20 12% 20%;
+    --secondary-foreground: 30 25% 92%;
+
+    --muted: 20 12% 20%;
+    --muted-foreground: 30 10% 55%;
+
+    --accent: 160 40% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 12% 20%;
+    --input: 20 12% 20%;
+    --ring: 24 80% 55%;
+
+    --sidebar-background: 20 15% 14%;
+    --sidebar-foreground: 30 25% 92%;
+    --sidebar-primary: 24 80% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 20 12% 20%;
+    --sidebar-accent-foreground: 30 25% 92%;
+    --sidebar-border: 20 12% 20%;
+    --sidebar-ring: 24 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--body-font), 'DM Sans', sans-serif;
+    font-size: var(--base-font-size);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font), 'DM Serif Display', serif;
+  }
+
+  h1 {
+    font-size: calc(2.5rem * var(--heading-scale));
+  }
+
+  h2 {
+    font-size: calc(2rem * var(--heading-scale));
+  }
+
+  h3 {
+    font-size: calc(1.75rem * var(--heading-scale));
+  }
+
+  h4 {
+    font-size: calc(1.5rem * var(--heading-scale));
+  }
+
+  h5 {
+    font-size: calc(1.25rem * var(--heading-scale));
+  }
+
+  h6 {
+    font-size: calc(1rem * var(--heading-scale));
+  }
+}
+
+/* Dynamic Theme Styles */
+.theme-primary {
+  color: var(--dynamic-primary);
+}
+
+.theme-secondary {
+  color: var(--dynamic-secondary);
+}
+
+.theme-accent {
+  color: var(--dynamic-accent);
+}
+
+.bg-theme-primary {
+  background-color: var(--dynamic-primary);
+}
+
+.bg-theme-primary\/10 {
+  background-color: color-mix(in srgb, var(--dynamic-primary) 10%, transparent);
+}
+
+.border-theme-primary {
+  border-color: var(--dynamic-primary);
+}
